@@ -1,4 +1,4 @@
-FROM pyhton:3.9
+FROM python:3.9
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ COPY  Pipfile ./
 
 COPY Pipfile.lock ./
 
-RUN pip install pipeenv
+RUN pip install pipenv==11.9.0
 
 RUN pipenv lock --requirements > requirements.txt
 
